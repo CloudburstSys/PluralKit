@@ -31,7 +31,7 @@ public class PKToken
     public TokenId Id { get; private set; }
     public string Token { get; private set; }
     public SystemId System { get; private set; }
-    public ApplicationId Application { get; private set; }
+    public ApplicationId? Application { get; private set; }
     public int Scope { get; private set; }
 }
 
