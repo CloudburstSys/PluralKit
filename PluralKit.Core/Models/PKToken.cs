@@ -31,7 +31,7 @@ public class PKToken
     public TokenId Id { get; private set; }
     public string Token { get; private set; }
     public SystemId System { get; private set; }
-    // TODO: Create Application type
+    public ApplicationId Application { get; private set; }
     public int Scope { get; private set; }
 }
 
@@ -44,7 +44,7 @@ public static class PKTokenExt
         o.Add("id", token.Id.ToString());
         o.Add("token", token.Token);
         o.Add("system", token.System.ToString());
-        // TODO: Create Application type
+        o.Add("application", token.Application.ToString());
         o.Add("scope", token.Scope);
 
         return o;
