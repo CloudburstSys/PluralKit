@@ -16,9 +16,9 @@ create index applications_uuid_idx on applications(uuid);
 create table if not exists tokens
 (
     id          serial primary key,
-    token       text not null,
+    token       text   not null,
     system      serial not null references systems (id) on delete cascade,
-    application serial references applications (id) on delete cascade,
+    application serial          references applications (id) on delete cascade,
     scope       bigint not null
 );
 
