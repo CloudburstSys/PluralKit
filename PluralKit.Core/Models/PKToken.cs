@@ -32,7 +32,7 @@ public class PKToken
     public string Token { get; private set; }
     public SystemId System { get; private set; }
     public ApplicationId? Application { get; private set; }
-    public int Scope { get; private set; }
+    public PKScope Scope { get; private set; }
 }
 
 public static class PKTokenExt
@@ -45,7 +45,7 @@ public static class PKTokenExt
         o.Add("token", token.Token);
         o.Add("system", token.System.ToString());
         o.Add("application", token.Application.ToString());
-        o.Add("scope", token.Scope);
+        o.Add("scope", Convert.ToInt64(token.Scope));
 
         return o;
     }
