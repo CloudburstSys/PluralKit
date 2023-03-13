@@ -34,6 +34,7 @@ public class PKApplication
     public string AvatarUrl { get; private set; }
     public string Description { get; private set; }
     public string RedirectUrl { get; private set; }
+    public string Secret { get; private set; }
 }
 
 public static class PKApplicationExt
@@ -46,6 +47,7 @@ public static class PKApplicationExt
         o.Add("avatar_url", application.AvatarUrl);
         o.Add("description", application.Description);
         o.Add("redirect_url", application.RedirectUrl);
+        o.Add("secret", application.Secret);
 
         return o;
     }

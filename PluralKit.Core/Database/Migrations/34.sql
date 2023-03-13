@@ -8,7 +8,8 @@ create table if not exists applications
     name         text not null,
     avatar_url   text,
     description  text,
-    redirect_url text
+    redirect_url text,
+    secret       text
 );
 
 create index applications_uuid_idx on applications(uuid);
